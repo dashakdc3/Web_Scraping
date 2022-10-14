@@ -48,13 +48,12 @@ class WebScraping():
         extractor = Extractor.from_yaml_file(self.yml_path)
         data_result = []
         result = []
-        print(urls)
         for url in urls:
             r = requests.get(url=url,headers=self.headers)
             full_content = r.text
             raw_content = extractor.extract(full_content)
             data_result.append(raw_content)
-        print(data_result)
+        print(urls)
         for data in data_result:
             result.append(data['temp'])
         print(result)
@@ -67,7 +66,7 @@ if __name__ == "__main__":
     third_Website = WebScraping(base_url=tw.base_url, cities=tw.cities, yml_path=tw.yml_path, slash=tw.slash  )
     first_Website.scrape()
     second_Website.scrape()
-    # third_Website.scrape()
+    third_Website.scrape()
 
 # if __name__ == "__main__": that helps us not to execute this code, if we importing it to another
 
