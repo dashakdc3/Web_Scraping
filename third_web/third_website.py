@@ -58,5 +58,6 @@ cities = [
     # 'tverskaya-27',
     # ]
 base_url = 'https://naturasiberica.ru/our-shops/'
-yml_path = "D:/WebScraping/t.yaml"
+yml_path = "D:/WebScraping/third_web/t.yaml"
 slash = ''
+csv_path = 'D:/WebScraping/third_web/csv_third_web.json'
