@@ -46,6 +46,7 @@ class WebScraping():
             data_result.append(raw_content)
         for data in data_result:
             result.append({'WebSites data': data['temp']})
+        print(result)
         return result
     
     def to_csv(self):
@@ -62,5 +63,5 @@ if __name__ == "__main__":
     second_website = WebScraping(base_url=sw.base_url, cities=sw.cities, yml_path=sw.yml_path, slash=sw.slash, csv_file=sw.csv_path )
     # third_website = WebScraping(base_url=tw.base_url, cities=tw.cities, yml_path=tw.yml_path, slash=tw.slash, csv_file=tw.csv_path  )
     # first_website.to_csv()
-    print(second_website.to_csv())
+    second_website.to_csv()
     # third_website.to_csv()
