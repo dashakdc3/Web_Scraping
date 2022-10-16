@@ -56,12 +56,11 @@ class WebScraping():
         with open(self.csv, 'r') as file:
             csvreader = csv.reader(file)
             for row in csvreader:
-                print(row)
-
+                return row
 if __name__ == "__main__":
     # first_website = WebScraping(base_url=fw.base_url, cities=fw.cities, yml_path=fw.yml_path, slash=fw.slash,csv_file=fw.csv_path )
     second_website = WebScraping(base_url=sw.base_url, cities=sw.cities, yml_path=sw.yml_path, slash=sw.slash, csv_file=sw.csv_path )
     # third_website = WebScraping(base_url=tw.base_url, cities=tw.cities, yml_path=tw.yml_path, slash=tw.slash, csv_file=tw.csv_path  )
     # first_website.to_csv()
-    second_website.to_csv()
+    print(second_website.to_csv())
     # third_website.to_csv()
